@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+
+:root{
+    --onyx: #413d3a;
+}
+
+
+*{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: 0.25s linear;
+    box-sizing: border-box;
+    
+}
+
+html{
+    font-size: 65%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+section{
+    padding: 3rem 9%;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: var(--onyx);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 8%;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+}
+
+.header .logo{
+    font-size: 2.6rem;
+    
+    color:aliceblue;
+    display: flex;
+    align-items: center;
+    text-decoration: none; 
+}
+
+.logo-text {
+    font-family: 'Cedarville Cursive', cursive;
+    
+}
+
+
+
+
+.header .navbar a{
+    font-size: 1.8rem;
+    color:aliceblue;
+    margin: 0 1rem;
+}
+
+.header .navbar a:hover{
+    color: rgba(165, 159, 159, 0.493);
+    
+}
+
+.header .icons div{
+    font-size: 2.5rem;
+    margin-left: 1.7rem;
+    cursor: pointer;
+    color: aliceblue;
+}
+
+.main{
+    padding-top: 15rem;
+    /* COLORRRR */
+    background-color: rgba(231, 215, 194, 0.877);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.main .slider .slide{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    display: none; 
+
+}
+
+/* Animacja napisów */
+@keyframes fadeLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-10%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.main .slider .slide.active{
+    display: flex;
+}
+
+.main .slider .slide .content{
+    flex: 1 1 40rem;
+    animation: fadeLeft .4s linear .4s backwards;
+}
+
+.main .slider .slide .content span{
+    color:rgb(0, 0, 0);
+    font-size: 2.5rem;
+}
+
+.main .slider .slide .content h3{
+    color: black;
+    font-size: 6rem;
+    padding: 0.6rem 0;
+}
+
+.main .slider .slide .breads{
+    flex: 1 1 40rem;
+    margin: 3rem 0;
+}
+
+.main .slider .slide .breads img{
+    width: 100%;
+    animation: fadeUp 0.6s linear;
+}
+
+.main #right,
+.main #left{
+    position:absolute;
+    
+    top:50%;
+    transform: translateY(-50%);
+    height: 7rem;
+    width: 7rem;
+    line-height: 7rem;
+    box-shadow: 0.1rem 0.5rem 1.1rem rgba(0,0,0,0.15);
+    text-align: center;
+    background: var(--onyx);
+    font-size: 3rem;
+    color:antiquewhite;
+    cursor:pointer;
+    background: #413d3a;
+    border-radius: 50%;
+    transition: all 0.4s ease-in-out;
+
+}
+
+.main #right:hover,
+.main #left:hover{
+    background: rgba(235, 202, 159, 0.651);
+    color: white;
+    
+    
+}
+
+.main #left{
+    left: 2rem;
+}
+
+.main #right{
+    right: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 767px){
+    html{
+        font-size: 50%;
+    }
+    
+}
+
