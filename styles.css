@@ -5,6 +5,10 @@
     --onyx: #413d3a;
 }
 
+body {
+    background: #413d3a;
+}
+
 
 *{
     font-family: 'Roboto', sans-serif;
@@ -208,6 +212,101 @@ section{
 .main #right{
     right: 2rem;
 }
+
+/* --------------------------------------------------------------------------- */
+
+
+.dmargin {
+    position: relative;
+    height: 10rem;
+    background: #413d3a;
+    overflow: hidden;
+    
+} 
+
+.heading h1{
+    color: white;
+    font-size: 5rem;
+    
+}
+
+.heading {
+    background: url("images/main.jpg") no-repeat;
+    background-size: cover;
+    background-position: top;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    align-items: center;
+    text-align: center;
+
+    
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    padding: 1.2rem 0;
+    border-bottom: 0.1rem solid rgba(0,0,0, 0.3);
+    color: white;
+}
+
+.title span{
+    padding-left: 0.6rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.heading p{
+    padding-top: 1rem;
+    font-size: 2rem;
+    color: white;
+}
+
+.heading p a{
+    color: rgb(37, 37, 37);
+    padding-right: .5rem;
+
+}
+
+.category .blocks{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 4rem 0;
+    justify-content: center; /* center the blocks horizontally */
+}
+
+.category .blocks .block{
+    text-align: center;
+    flex-basis: calc(25% - 1.5rem); /* set the width of each block */
+    margin-bottom: 1.5rem; /* add some bottom margin to each block */
+}
+
+.category .blocks .block img{
+    height: 15rem;
+}
+
+.category .blocks .block h3{
+    font-size: 2rem;
+    margin: 1rem 0;
+    color:black;
+}
+
+.category .blocks .block:hover h3{
+    color:white;
+}
+
 
 
 
