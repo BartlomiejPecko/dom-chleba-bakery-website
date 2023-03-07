@@ -289,8 +289,8 @@ section{
 
 .category .blocks .block{
     text-align: center;
-    flex-basis: calc(25% - 1.5rem); /* set the width of each block */
-    margin-bottom: 1.5rem; /* add some bottom margin to each block */
+    flex-basis: calc(25% - 1.5rem);
+    margin-bottom: .5rem; 
 }
 
 .category .blocks .block img{
@@ -306,6 +306,8 @@ section{
 .category .blocks .block:hover h3{
     color:white;
 }
+
+
 
 
 
