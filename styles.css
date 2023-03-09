@@ -49,7 +49,7 @@ section{
 .header .logo{
     font-size: 2.6rem;
     
-    color:aliceblue;
+    color:ivory;
     display: flex;
     align-items: center;
     text-decoration: none; 
@@ -65,7 +65,7 @@ section{
 
 .header .navbar a{
     font-size: 1.8rem;
-    color: aliceblue;
+    color: ivory;
     margin: 0 1rem;
     position: relative; 
     z-index: 1; 
@@ -98,7 +98,7 @@ section{
     font-size: 2.5rem;
     margin-left: 1.7rem;
     cursor: pointer;
-    color: aliceblue;
+    color: ivory;
 }
 
 .main{
@@ -189,7 +189,7 @@ section{
     text-align: center;
     background: var(--onyx);
     font-size: 3rem;
-    color:antiquewhite;
+    color:ivory;
     cursor:pointer;
     background: #413d3a;
     border-radius: 50%;
@@ -200,7 +200,7 @@ section{
 .main #right:hover,
 .main #left:hover{
     background: rgba(235, 202, 159, 0.651);
-    color: white;
+    color: ivory;
     
     
 }
@@ -225,7 +225,7 @@ section{
 } 
 
 .heading h1{
-    color: white;
+    color: ivory;
     font-size: 5rem;
     
 }
@@ -249,7 +249,7 @@ section{
     margin-bottom: 3rem;
     padding: 1.2rem 0;
     border-bottom: 0.1rem solid rgba(0,0,0, 0.3);
-    color: white;
+    color: ivory;
 }
 
 .title span{
@@ -270,7 +270,7 @@ section{
 .heading p{
     padding-top: 1rem;
     font-size: 2rem;
-    color: white;
+    color: ivory;
 }
 
 .heading p a{
