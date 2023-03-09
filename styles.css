@@ -307,6 +307,50 @@ section{
     color:white;
 }
 
+/*------KONTAKT---------------------------*/ 
+
+.contact .contact-icons{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 2.5rem;
+
+}
+
+.contact .contact-icons .icons{
+    text-align: center;
+    border: 0.1rem solid var(--onyx);
+    padding: 2rem;
+
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.705);
+}
+
+.contact .contact-icons .icons i{
+    height: 7rem;
+    width: 7rem;
+    line-height: 7rem;
+    font-size: 3rem;
+
+    background: rgb(32, 32, 32);
+    color:ivory;
+    border-radius: 50%;
+
+}
+
+.contact .contact-icons .icons h3{
+    color:ivory;
+    font-size: 2rem;
+    padding: 1.2rem 0;
+    
+}
+
+.contact .contact-icons .icons p{
+    color: ivory;
+    font-size: 1.5rem;
+    line-height: 2;
+}
+
+
+
 
 
 
