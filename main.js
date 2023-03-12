@@ -12,3 +12,12 @@ function prev() {
     index = (index - 1 + slides.length) % slides.length;
     slides[index].classList.add('active');
 }
+
+
+var links = document.querySelectorAll('.block');
+
+links.forEach(function(link) {
+  link.addEventListener('click', function(event) {
+    event.preventDefault();
+  });
+});

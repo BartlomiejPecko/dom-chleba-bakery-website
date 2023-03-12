@@ -103,7 +103,7 @@ section{
 
 .main{
     padding-top: 15rem;
-    /* COLORRRR */
+    
     background-color: rgba(231, 215, 194, 0.877);
     background-size: cover;
     background-position: center;
@@ -239,6 +239,8 @@ section{
     align-items: center;
     text-align: center;
 
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.705);
+
     
 }
 
@@ -304,9 +306,17 @@ section{
     margin: 1rem 0;
     color:black;
 }
+.category .blocks .block P{
+    color: #CCCCCC;
+    font-size: 1.5rem;
+    padding-bottom: 3rem;
+}
 
 .category .blocks .block:hover h3{
-    color:white;
+    color:#CCCCCC;
+}
+.category .blocks .block:hover p{
+    color: #CCCCCC;
 }
 
 /*-----------O NAS---------------------*/
