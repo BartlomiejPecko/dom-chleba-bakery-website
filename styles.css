@@ -132,7 +132,7 @@ section{
     }
 }
 
-@keyframes fadeUp {
+/* @keyframes fadeUp {
     0% {
         opacity: 0;
         transform: scale(0.8);
@@ -141,7 +141,7 @@ section{
         opacity: 1;
         transform: scale(1);
     }
-}
+} */
 
 .main .slider .slide.active{
     display: flex;
@@ -261,14 +261,6 @@ section{
 
 
 
-
-
-
-
-
-
-
-
 .heading p{
     padding-top: 1rem;
     font-size: 2rem;
@@ -281,22 +273,31 @@ section{
 
 }
 
+
+
+
 .category .blocks{
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
     padding: 4rem 0;
     justify-content: center; /* center the blocks horizontally */
+
+  /*  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.705); */
+
 }
 
 .category .blocks .block{
     text-align: center;
     flex-basis: calc(25% - 1.5rem);
     margin-bottom: .5rem; 
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.705);
+   
 }
 
 .category .blocks .block img{
     height: 15rem;
+    margin-top: 1rem;
     
     
 }
@@ -304,20 +305,56 @@ section{
 .category .blocks .block h3{
     font-size: 2rem;
     margin: 1rem 0;
-    color:black;
+    color:#cccccce8;
+    font-family: cursive;
 }
 .category .blocks .block P{
-    color: #CCCCCC;
+    color: #cccccce8;
     font-size: 1.5rem;
-    padding-bottom: 3rem;
+    padding-bottom: 1rem;
+    font-family: cursive;
 }
 
 .category .blocks .block:hover h3{
-    color:#CCCCCC;
+    color:white;
 }
 .category .blocks .block:hover p{
-    color: #CCCCCC;
+    color: white;
 }
+
+.breads img[src="breads/MALYZIARN.png"] {
+    max-width: 40rem !important;
+    height: auto !important;
+    display: block;
+    margin: 2rem 0 0 -10rem;
+    position: relative;
+    left: 2rem;
+    top: 2rem;
+  }
+
+  .breads img[src="breads/DUZY.png"] {
+    max-width: 105rem !important;
+    height: auto !important;
+    display: block;
+    margin: 1rem 0 0 -10rem;
+    position: relative;
+    left: 2rem;
+    top: 0rem;
+  }
+
+  .breads img[src="breads/cebulowymain.png"] {
+    max-width: 50rem !important;
+    height: auto !important;
+    display: block;
+    margin: 2rem 0 0 -10rem;
+    position: relative;
+    left: 2rem;
+    top: 2rem;
+  }
+
+  
+
+
 
 /*-----------O NAS---------------------*/
 .about{
@@ -338,12 +375,14 @@ section{
 
 .about .text{
     flex: 1 1 40rem;
+    
 }
 
 .about .text span{
     color: ivory;
     font-size: 4.2rem;
     font-family: 'Cedarville Cursive', cursive;
+    
 }
 
 .about .text h3{
@@ -405,7 +444,19 @@ section{
     line-height: 2;
 }
 
+.icons:hover {
+    transform: scale(1.05); 
+    transition: all 0.3s ease-in-out; 
+  } 
 
+
+
+.icons a {
+    text-decoration: none;
+    display: block;
+    height: 100;
+    width: 100;
+  }
 
 
 
