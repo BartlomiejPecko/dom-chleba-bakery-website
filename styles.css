@@ -376,6 +376,7 @@ section{
     align-items: center;
     flex-wrap: wrap;
     gap: 1.5rem;
+    margin-top: -2rem;
 }
 
 .about .img{
@@ -389,6 +390,8 @@ section{
 
 .about .text{
     flex: 1 1 40rem;
+    text-align: center;
+    
     
 }
 
@@ -396,6 +399,7 @@ section{
     color: ivory;
     font-size: 4.2rem;
     font-family: 'Cedarville Cursive', cursive;
+    
     
 }
 
@@ -458,10 +462,14 @@ section{
     line-height: 2;
 }
 
-.contact-icons .iframe-ic iframe {
+.contact-icons .iframe-ic iframe{
     width:100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    
     
 }
+
 
 /* .icons:hover {
     transform: scale(1.05); 
@@ -477,6 +485,20 @@ section{
     width: 100;
   }
 
+.hover:hover{
+    transform: scale(1.05); 
+    transition: all 0.3s ease-in-out;
+  }
+
+.rynki {
+    text-decoration: underline;
+    text-decoration-color: #F5F5DC;
+    text-decoration-thickness: 1px;
+    font-size: 1.8rem;
+    color: ivory;
+    
+    text-underline-offset: 0.2rem;
+}
 
 
 
@@ -515,6 +537,8 @@ section{
 
 
 
+
+ 
 
 
 
