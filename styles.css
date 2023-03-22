@@ -397,7 +397,7 @@ section{
 
 .about .text span{
     color: ivory;
-    font-size: 4.2rem;
+    font-size: 5.8rem;
     font-family: 'Cedarville Cursive', cursive;
     
     
@@ -405,8 +405,12 @@ section{
 
 .about .text h3{
     color: ivory;
-    font-size: 1.5rem;
-    padding-top: .5rem;
+    font-size: 1.9rem;
+    padding-bottom: 1.4rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    line-height: 2.8rem;
 }
 
 .about .text p{
@@ -490,100 +494,29 @@ section{
     transition: all 0.3s ease-in-out;
   }
 
-.rynki {
-    text-decoration: underline;
-    text-decoration-color: #F5F5DC;
-    text-decoration-thickness: 1px;
+  .rynki {
+    font-family: 'Roboto', sans-serif;
     font-size: 1.8rem;
-    color: ivory;
-    
-    text-underline-offset: 0.2rem;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-sizing: border-box;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    box-shadow: -0.1rem 0.05rem 0.5rem #888888c7;
+   
+
+  }
+
+  .rynki:hover {
+    border: 1px solid rgb(32, 32, 32);
+    box-shadow: -0.17rem 0.11rem 0.62rem #888;
+    scale: 1.07;
+  }
+  
+  
+  
+
+
+/* sell locations divs */
 
 
 
