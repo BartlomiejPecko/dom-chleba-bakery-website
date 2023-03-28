@@ -4,6 +4,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&display=swap');
+
 :root{
     --onyx: #413d3a;
 }
@@ -312,7 +314,7 @@ section{
     font-size: 2rem;
     margin: 1rem 0;
     color:#dfdabeec;
-    font-family: cursive;
+    font-family:'Edu NSW ACT Foundation', cursive;
     text-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.305);
     
 }
@@ -320,7 +322,7 @@ section{
     color: #dfdabeec;
     font-size: 1.5rem;
     padding-bottom: 1rem;
-    font-family: cursive;
+    font-family: 'Edu NSW ACT Foundation', cursive;
     text-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.305);
     
 }
