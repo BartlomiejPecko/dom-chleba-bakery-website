@@ -525,20 +525,43 @@ section{
 
 
 
-
-
-
-
-
-
-
-
-
 @media (max-width: 767px){
-    html{
-        font-size: 50%;
-        font-family: arial;
-    }
+    .header .navbar a {
+        margin: 0.5rem;
+        display: block;
+        text-align: center;
+        background-color: #333333;
+        padding: 1rem; 
+        color: #ffffff;
+        border-radius: 5px;
+      }
+    
+      .header .icons div {
+        margin: 1rem;
+      }
     
 }
+
+@media (max-width: 487px) {
+    .header .navbar a {
+      margin: 0.5rem;
+      display: block;
+      text-align: center;
+      background-color: #333333;
+      padding: 1rem; 
+      color: #ffffff; 
+      border-radius: 5px;
+    }
+  
+    .header .icons div {
+      margin: 1rem;
+    }
+    html{
+        font-size: 55%;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+    }
+  }
+
+
 
