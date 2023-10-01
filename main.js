@@ -1,3 +1,13 @@
+let navbar = document.querySelector('.navbar');
+document.querySelector('#menu-btn').onclick = () => {
+  navbar.classList.toggle('active');
+}
+
+window.onscroll = () => {
+  navbar.classList.remove('active');
+}
+
+
 let slides = document.querySelectorAll('.main .slider .slide');
 let index = 0;
 
@@ -73,3 +83,4 @@ kontaktLink.addEventListener('click', (event) => {
   const kontaktSectionPosition = kontaktSection.getBoundingClientRect().top + window.pageYOffset - offset;
   window.scrollTo({ top: kontaktSectionPosition, behavior: 'smooth' });
 });
+
