@@ -110,6 +110,10 @@ section{
     color: ivory;
 }
 
+.header .icons div:hover{
+    color: #222;
+}
+
 .main{
     padding-top: 15rem;
     
@@ -565,14 +569,16 @@ section{
         top: 99%;
         left: 0;
         right: 0;
-        background: var(--onyx);
+        background: #222;
         border-top: 0.1rem solid rgba(0,0,0,0.1);
         border-bottom: 0.1rem solid rgba(0,0,0,0.1);
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     }
 
     .header .navbar.active{
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0%, 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
     }
 
     .header .navbar a{
@@ -583,7 +589,7 @@ section{
         display: block;
         border-radius: .5rem;
     }
-}
+
 
 @media (max-width: 450px){
     html{
