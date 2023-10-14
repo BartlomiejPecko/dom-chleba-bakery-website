@@ -7,11 +7,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&display=swap');
 
 :root{
-    --onyx: #413d3a;
+    
+    --onyx: rgb(32,32,34);
 }
 
 body {
-    background: #413d3a;
+    
+    background: rgb(32, 32, 34);
 }
 
 
@@ -23,7 +25,7 @@ body {
     border: none;
     text-decoration: none;
     transition: 0.25s linear;
-    box-sizing: border-box;
+    
     
 }
 
@@ -47,7 +49,7 @@ section{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1.5rem 8%;
+    padding: 2rem 9%;
     box-shadow: 0 0.5rem 1rem rgba(0,0,0, 0.4);
 }
 
@@ -95,6 +97,7 @@ section{
     bottom: -6px;
     border-radius: 11px;
     background-color: rgba(255, 255, 255, 0.247);
+    
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
 }
@@ -145,16 +148,7 @@ section{
     }
 }
 
-/* @keyframes fadeUp {
-    0% {
-        opacity: 0;
-        transform: scale(0.8);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-} */
+
 
 .main .slider .slide.active{
     display: flex;
@@ -204,7 +198,7 @@ section{
     font-size: 3rem;
     color:ivory;
     cursor:pointer;
-    background: #413d3a;
+    background: rgb(32, 32, 34);
     border-radius: 50%;
     transition: all 0.4s ease-in-out;
 
@@ -232,7 +226,8 @@ section{
 .dmargin {
     position: relative;
     height: 10rem;
-    background: #413d3a;
+    
+    background: rgb(32, 32, 34);
     overflow: hidden;
     
 } 
@@ -290,39 +285,36 @@ section{
 }
 
 
-
-
 .category .blocks{
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
     padding: 4rem 0;
-    justify-content: center; /* center the blocks horizontally */
+    justify-content: center; 
 
-  /*  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.705); */
+
 
 }
 
-.category .blocks .block{
+.category .blocks .block {
     text-align: center;
-    flex-basis: calc(25% - 1.5rem);
-    margin-bottom: .5rem; 
+    flex-basis: 20rem; 
+    margin-bottom: .5rem;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.705);
    
 }
 
-.category .blocks .block img{
+.category .blocks .block img {
+    max-width: 100%; 
     height: 15rem;
     margin-top: 1rem;
-    
-    
 }
 
 .category .blocks .block h3{
     font-size: 2rem;
     margin: 1rem 0;
     color:#dfdabeec;
-    font-family:'Edu NSW ACT Foundation', cursive;
+    font-family:Arial, Helvetica, sans-serif;
     text-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.305);
     
 }
@@ -330,13 +322,14 @@ section{
     color: #dfdabeec;
     font-size: 1.5rem;
     padding-bottom: 1rem;
-    font-family: 'Edu NSW ACT Foundation', cursive;
+    font-family: Arial, Helvetica, sans-serif;
     text-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.305);
     
 }
 
 .category .blocks .block:hover h3{
     color:white;
+
 }
 .category .blocks .block:hover p{
     color: white;
@@ -395,7 +388,7 @@ section{
 
 .about .img img{
     width: 90%;
-    /* box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.705); */
+    
 }
 
 .about .text{
@@ -526,30 +519,7 @@ section{
   
 
 
-/* sell locations divs */
 
-
-
-/* @media (max-width: 867px){
-
-    html{
-        font-size: 57%;
-    }
-    .header .navbar a {
-        margin: 0.5rem;
-        display: block;
-        text-align: center;
-        background-color: #333333;
-        padding: 1rem; 
-        color: #ffffff;
-        border-radius: 5px;
-      }
-    
-      .header .icons div {
-        margin: 1rem;
-      }
-    
-} */
 
 @media(max-width: 1000px){
     html{
@@ -564,6 +534,11 @@ section{
     #menu-btn{
         display: inline-block;
     }
+
+    .category .blocks .block {
+        flex-basis: 100%; /* Set blocks to take up 100% width, one block per row */
+    }
+
     .header .navbar{
         position: absolute;
         top: 99%;
@@ -578,9 +553,6 @@ section{
     .header .navbar.active{
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     }
-
-    }
-
     .header .navbar a{
         margin: 1.5rem;
         padding: 1.5rem;
@@ -589,6 +561,9 @@ section{
         display: block;
         border-radius: .5rem;
     }
+
+    }
+
 
 
 @media (max-width: 450px){
@@ -599,27 +574,6 @@ section{
 
 
 
-
-/* @media (max-width: 487px) {
-    .header .navbar a {
-      margin: 0.5rem;
-      display: block;
-      text-align: center;
-      background-color: #333333;
-      padding: 1rem; 
-      color: #ffffff; 
-      border-radius: 5px;
-    }
-  
-    .header .icons div {
-      margin: 1rem;
-    }
-    html{
-        font-size: 55%;
-        overflow-x: hidden;
-        scroll-behavior: smooth;
-    }
-  } */
 
 
 
