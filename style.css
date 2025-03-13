@@ -576,17 +576,16 @@ section{
   
   /* Add this to your style.css file */
 
-/* 2. Kod CSS do dodania na końcu pliku style.css */
 
-/* Style formularza kontaktowego */
+/* Poprawiony CSS formularza */
 .contact-form {
     background-color: rgba(40, 40, 40, 0.95);
     border-radius: 8px;
-    padding: 2rem;
+    padding: 3rem;
     margin-top: 2rem;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
     transition: all 0.3s ease;
-    max-width: 60rem;
+    max-width: 50rem;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 3rem;
@@ -594,19 +593,20 @@ section{
   }
   
   .contact-form .form-group {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
   }
   
   .contact-form input,
   .contact-form textarea {
     width: 100%;
-    padding: 1.2rem;
+    padding: 1.5rem;
     background-color: rgba(32, 32, 34, 0.8);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 5px;
     color: ivory;
     font-size: 1.6rem;
     transition: all 0.3s ease;
+    box-sizing: border-box; /* Ważne - zapewnia, że padding jest wliczany w szerokość */
   }
   
   .contact-form input:focus,
@@ -619,19 +619,22 @@ section{
   .contact-form textarea {
     min-height: 15rem;
     resize: vertical;
+    padding: 1.5rem;
   }
   
   .contact-form button {
     background-color: rgba(32, 32, 34, 1);
     color: ivory;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 1.2rem 2.5rem;
+    padding: 1.5rem 3rem;
     font-size: 1.8rem;
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease;
     display: block;
-    margin: 0 auto;
+    margin: 2rem auto 0;
+    width: auto;
+    min-width: 20rem;
   }
   
   .contact-form button:hover {
@@ -643,25 +646,26 @@ section{
     font-size: 1.4rem !important;
     opacity: 0.7;
     margin-top: 0.5rem;
+    margin-bottom: 1rem;
   }
   
   /* Responsywność formularza */
   @media (max-width: 768px) {
     .contact-form {
-      padding: 1.5rem;
+      padding: 2rem;
       max-width: 90%;
     }
     
     .contact-form input,
     .contact-form textarea {
-      padding: 1rem;
+      padding: 1.2rem;
     }
     
     .contact-form button {
       width: 100%;
+      min-width: auto;
     }
   }
-
 
 
 @media(max-width: 1000px){
