@@ -136,6 +136,8 @@ section{
 
 }
 
+
+
 /* Animacja napisów */
 @keyframes fadeLeft {
     0% {
@@ -370,8 +372,64 @@ section{
     font-family: 'Roboto', sans-serif;
 }
 
+.block {
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: rgba(40, 40, 40, 0.5);
+    padding-bottom: 15px;
+    text-decoration: none; /* Usunięcie podkreślenia linku */
+  }
+  
+  .block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+  
+  /* Stylizacja zdjęcia produktu */
+  .block img {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    object-fit: cover;
+  }
+  
+  /* Stylizacja nazwy produktu */
+  .block h3 {
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #fff;
+    text-align: center;
+    margin-top: 12px;
+    margin-bottom: 5px;
+  }
+  
+  /* Stylizacja informacji o wadze i cenie */
+  .block p {
+    text-align: center;
+    margin: 5px 0;
+  }
+  
+  /* Styl dla wagi produktu */
+  .block p:nth-of-type(1) {
+    color: #b0b0b0;
+    font-size: 0.9em;
+  }
+  
+  /* Styl dla ceny */
+  .block p:nth-of-type(2) {
+    color: #f0f0f0;
+    font-weight: bold;
+    font-size: 1.1em;
+  }
+  
+  /* Poprawka dla kontenera produktów */
+  .blocks {
+    gap: 25px;
+  }
 
-
+  
 
 /*-----------O NAS---------------------*/
 .about{
@@ -516,8 +574,93 @@ section{
   }
   
   
-  
+  /* Add this to your style.css file */
 
+/* 2. Kod CSS do dodania na końcu pliku style.css */
+
+/* Style formularza kontaktowego */
+.contact-form {
+    background-color: rgba(40, 40, 40, 0.95);
+    border-radius: 8px;
+    padding: 2rem;
+    margin-top: 2rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+    max-width: 60rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3rem;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+  
+  .contact-form .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 1.2rem;
+    background-color: rgba(32, 32, 34, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    color: ivory;
+    font-size: 1.6rem;
+    transition: all 0.3s ease;
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    border-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(32, 32, 34, 1);
+    outline: none;
+  }
+  
+  .contact-form textarea {
+    min-height: 15rem;
+    resize: vertical;
+  }
+  
+  .contact-form button {
+    background-color: rgba(32, 32, 34, 1);
+    color: ivory;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 1.2rem 2.5rem;
+    font-size: 1.8rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .contact-form button:hover {
+    background-color: rgba(235, 202, 159, 0.2);
+    transform: translateY(-3px);
+  }
+  
+  .click-info {
+    font-size: 1.4rem !important;
+    opacity: 0.7;
+    margin-top: 0.5rem;
+  }
+  
+  /* Responsywność formularza */
+  @media (max-width: 768px) {
+    .contact-form {
+      padding: 1.5rem;
+      max-width: 90%;
+    }
+    
+    .contact-form input,
+    .contact-form textarea {
+      padding: 1rem;
+    }
+    
+    .contact-form button {
+      width: 100%;
+    }
+  }
 
 
 

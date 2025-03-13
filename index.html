@@ -213,6 +213,51 @@
     </div>
 </section>
 
+<section class="category">
+    <h1 class="title"> <span>Mięsa wędzone</span></h1>
+
+    <div class="blocks">
+        <!---->
+        <a href="#" class="block">
+            <img src="meat/placeholder1.png" alt="Placeholder Image">
+            <h3>NAZWA PRODUKTU 1</h3>
+            <p>000g</p>
+            <p>00zł</p>
+        </a>
+
+        <!---->
+        <a href="#" class="block">
+            <img src="meat/placeholder2.png" alt="Placeholder Image">
+            <h3>NAZWA PRODUKTU 2</h3>
+            <p>000g</p>
+            <p>00zł</p>
+        </a>
+
+        <!---->
+        <a href="#" class="block">
+            <img src="meat/placeholder3.png" alt="Placeholder Image">
+            <h3>NAZWA PRODUKTU 3</h3>
+            <p>000g</p>
+            <p>00zł</p>
+        </a>
+
+        <!---->
+        <a href="#" class="block">
+            <img src="meat/placeholder4.png" alt="Placeholder Image">
+            <h3>NAZWA PRODUKTU 4</h3>
+            <p>000g</p>
+            <p>00zł</p>
+        </a>
+
+        <!---->
+        <a href="#" class="block">
+            <img src="meat/placeholder5.png" alt="Placeholder Image">
+            <h3>NAZWA PRODUKTU 5</h3>
+            <p>000g</p>
+            <p>00zł</p>
+        </a>
+    </div>
+</section>
 
 <!----MIEJSCA SPRZEDAŻY-->
 <div class="heading">
@@ -329,11 +374,30 @@
         </div>
 
 
-        <div class="icons hover">
+        <div class="icons hover" id="email-contact">
             <i class="fas fa-envelope"></i>
             <h3>Napisz do nas</h3>
             <p>domchlebawrakszawie@gmail.com</p>
-            <p></p>
+            <p class="click-info">Kliknij, aby otworzyć formularz</p>
+            
+            <!-- Formularz kontaktowy (początkowo ukryty) -->
+            <div class="contact-form" id="contact-form" style="display: none;">
+                <form id="email-form" action="https://formspree.io/f/domchlebawrakszawie@gmail.com" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Imię i nazwisko" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Twój email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="subject" placeholder="Temat">
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Twoja wiadomość" required></textarea>
+                    </div>
+                    <button type="submit">Wyślij wiadomość</button>
+                </form>
+            </div>
         </div>
 
 

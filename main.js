@@ -84,3 +84,67 @@ kontaktLink.addEventListener('click', (event) => {
   window.scrollTo({ top: kontaktSectionPosition, behavior: 'smooth' });
 });
 
+// --------- Email ------------
+
+// 3. Kod JavaScript do dodania na końcu pliku main.js
+
+// Kod obsługujący formularz kontaktowy
+document.addEventListener('DOMContentLoaded', function() {
+  // Znajdź elementy formularza
+  const emailContact = document.getElementById('email-contact');
+  const contactForm = document.getElementById('contact-form');
+  let formVisible = false;
+  
+  // Funkcja przełączająca widoczność formularza
+  function toggleContactForm() {
+    formVisible = !formVisible;
+    
+    if (formVisible) {
+      contactForm.style.display = 'block';
+      // Animacja pojawienia się formularza
+      contactForm.style.opacity = '0';
+      contactForm.style.transform = 'translateY(-20px)';
+      
+      setTimeout(() => {
+        contactForm.style.opacity = '1';
+        contactForm.style.transform = 'translateY(0)';
+      }, 10);
+    } else {
+      // Animacja znikania formularza
+      contactForm.style.opacity = '0';
+      contactForm.style.transform = 'translateY(-20px)';
+      
+      setTimeout(() => {
+        contactForm.style.display = 'none';
+      }, 300);
+    }
+  }
+  
+  // Dodaj obsługę kliknięcia na cały element "Napisz do nas"
+  emailContact.addEventListener('click', function(event) {
+    // Sprawdź, czy kliknięcie nie było na formularzu (aby uniknąć zamykania przy kliknięciu w formularz)
+    if (!event.target.closest('#contact-form') || event.target.closest('#contact-form') === contactForm) {
+      event.preventDefault();
+      toggleContactForm();
+    }
+  });
+  
+  // Obsługa wysyłania formularza
+  document.getElementById('email-form').addEventListener('submit', function(e) {
+    // Zapobieganie domyślnej akcji formularza
+    e.preventDefault();
+    
+    // Tutaj normalnie byłaby obsługa wysyłki formularza
+    // Dla demonstracji pokazujemy alert
+    alert('Dziękujemy za wiadomość! Skontaktujemy się z Tobą wkrótce.');
+    toggleContactForm(); // Ukryj formularz po wysłaniu
+    
+    // Resetuj pola formularza
+    this.reset();
+  });
+  
+  // Zapobiegaj rozprzestrzenianiu się zdarzeń z formularza
+  contactForm.addEventListener('click', function(event) {
+    event.stopPropagation();
+  });
+});
