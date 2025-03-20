@@ -615,6 +615,32 @@ section{
     background-color: rgba(32, 32, 34, 1);
     outline: none;
   }
+
+/* Form result message styling */
+.form-result {
+    padding: 1.5rem;
+    margin-top: 2rem;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    transition: all 0.3s ease;
+  }
+  
+  .form-result .success-message {
+    color: #4caf50;
+    margin: 0;
+  }
+  
+  .form-result .error-message {
+    color: #f44336;
+    margin: 0;
+  }
+  
+  /* Button disabled state */
+  .contact-form button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    background-color: rgba(32, 32, 34, 0.7);
+  }
   
   .contact-form textarea {
     min-height: 15rem;
