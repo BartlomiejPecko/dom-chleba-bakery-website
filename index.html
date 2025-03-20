@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <!-- Add after your Font Awesome CDN but before your custom CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -260,73 +263,103 @@
 </section>
 
 <!----MIEJSCA SPRZEDAŻY-->
+<!----MIEJSCA SPRZEDAŻY-->
 <div class="heading">
-    <h1> MIEJSCA SPRZEDAŻY</h1>
+    <h1>MIEJSCA SPRZEDAŻY</h1>
 </div>
 
-<section class="contact" id="miejsca-sprzedazy"> <!--Klasa wzięta z sekcji kontaktu-->
-    <div class="contact-icons">
-
-        <div class="icons iframe-ic div1">
-            <i class="fas fa-map-marker"></i>
-            <h3>NA MIEJSCU</h3>
-            <p>Rakszawa 406</p>
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10224.36800119611!2d22.243417!3d50.159416!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473ce9d2ee84b289%3A0xe39e03b2445879e3!2sDom%20Chleba%20w%20Rakszawie%20Arkadiusz%20Kot!5e0!3m2!1spl!2spl!4v1678988530254!5m2!1spl!2spl"
-                width="600" 
-                height="330" 
-                style="border: 0px solid black;" 
-                allowfullscreen="" 
-                loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-            <p>PON 10:00 - 21:00</p>
-            <p>WT 11:00 - 21:00</p>
-            <p>ŚR 7:00 - 22:00</p>
-            <p>CZW 7:00 - 22:00</p>
-            <p>PT 6:00 - 22:00</p>
+<section class="sales-locations py-5" id="miejsca-sprzedazy">
+    <div class="container">
+        <div class="row g-4"> <!-- Bootstrap grid with gutters -->
+            
+            <!-- Location Card 1: Na Miejscu -->
+            <div class="col-lg-4 col-md-6">
+                <div class="location-card h-100">
+                    <div class="location-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>NA MIEJSCU</h3>
+                    <p class="address">Rakszawa 406</p>
+                    
+                    <div class="map-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10224.36800119611!2d22.243417!3d50.159416!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473ce9d2ee84b289%3A0xe39e03b2445879e3!2sDom%20Chleba%20w%20Rakszawie%20Arkadiusz%20Kot!5e0!3m2!1spl!2spl!4v1678988530254!5m2!1spl!2spl"
+                            style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                    
+                    <div class="hours-list">
+                        <div class="hour-item"><span>PON</span> 10:00 - 21:00</div>
+                        <div class="hour-item"><span>WT</span> 11:00 - 21:00</div>
+                        <div class="hour-item"><span>ŚR</span> 7:00 - 22:00</div>
+                        <div class="hour-item"><span>CZW</span> 7:00 - 22:00</div>
+                        <div class="hour-item"><span>PT</span> 6:00 - 22:00</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Location Card 2: Dowóz do sklepów -->
+            <div class="col-lg-4 col-md-6">
+                <div class="location-card h-100">
+                    <div class="location-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>DOWÓZ DO SKLEPÓW</h3>
+                    
+                    <div class="store-list">
+                        <div class="store-item">Sieć sklepów FRAC w Rzeszowie</div>
+                        <div class="store-item">Hala targowa w Rzeszowie</div>
+                        <div class="store-item">
+                            <p>Delikatesy centrum</p>
+                            <p class="locations">Grodzisko, Wierzawice, Brzóza, Giedlarowa</p>
+                        </div>
+                        <div class="store-item">
+                            <p>Sieć sklepów VITA</p>
+                            <p class="locations">Leżajsk przy klasztorze, Rakszawa, Wólka Niedżwiedzka</p>
+                        </div>
+                        <div class="store-item">HITPOL Grodzisko</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Location Card 3: Rynki -->
+            <div class="col-lg-4 col-md-12">
+                <div class="location-card h-100">
+                    <div class="location-icon">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <h3>RYNKI</h3>
+                    
+                    <div class="market-list">
+                        <div class="market-item">
+                            <div class="day">WTOREK</div>
+                            <p class="locations">Leżajsk, Strzyżów, Jarosław</p>
+                        </div>
+                        
+                        <div class="market-item">
+                            <div class="day">ŚRODA</div>
+                            <p class="locations">Przeworsk, Sokołów, Sanok</p>
+                        </div>
+                        
+                        <div class="market-item">
+                            <div class="day">CZWARTEK</div>
+                            <p class="locations">Mielec, Pruchnik oraz objazd po Leżajsku</p>
+                        </div>
+                        
+                        <div class="market-item">
+                            <div class="day">PIĄTEK</div>
+                            <p class="locations">Sędziszów, Krzeszów, Ropczyce</p>
+                        </div>
+                        
+                        <div class="market-item">
+                            <div class="day">SOBOTA</div>
+                            <p class="locations">Przeworsk, Bratkowice, Tarnogród, Objazd po Trzebosi oraz Medyni</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
         </div>
-
-        <div class="icons hover">
-            <i class="fas fa-map-marker"></i>
-            <h3>DOWÓZ DO SKLEPÓW</h3>
-            <p class="rynki">Sieć sklepów FRAC w Rzeszowie</p>
-            <p class="rynki">Hala targowa w Rzeszowie</p>
-            <p class="rynki">Delikatesy centrum <br> Grodzisko, &nbsp;Wierzawice, &nbsp;Brzóza, &nbsp;Giedlarowa</p>
-            <p></p>
-            
-            <p class="rynki">Sieć sklepów VITA <br> Leżajsk przy klasztorze, &nbsp;Rakszawa, &nbsp;Wólka Niedżwiedzka</p>
-            <p></p>
-            
-            <p class="rynki">HITPOL Grodzisko</p>
-
-        </div>
-
-        <div class="icons hover">
-            <i class="fas fa-map-marker"></i>
-            <h3>RYNKI</h3>
-
-            <p class="rynki">WTOREK <br> Leżajsk, &nbsp; Strzyżów, &nbsp;Jarosław</p>
-           <!--- <p>Leżajsk, &nbsp; Strzyżów, &nbsp;Jarosław</p> --->
-            
-            
-
-            <p class="rynki">ŚRODA <br> Przeworsk, &nbsp;Sokołów, &nbsp;Sanok</p>
-            <p></p>
-            
-
-            <p class="rynki">CZWARTEK <br>Mielec, &nbsp;Pruchnik oraz objazd po Leżajsku</p>
-            <p></p>
-            
-
-            <p class="rynki">PIĄTEK <br> Sędziszów, &nbsp;Krzeszów, &nbsp;Ropczyce</p>
-            <p></p>
-
-            <p class="rynki">SOBOTA <br> Przeworsk, &nbsp;Bratkowice, &nbsp;Tarnogród, Objazd po Trzebosi oraz Medyni<br> </p>
-           
-        </div>
-
-
     </div>
 </section>
 

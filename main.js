@@ -48,13 +48,15 @@ produktyLink.addEventListener('click', (event) => {
 });
 
 
+
 const miejscaLink = document.querySelector('a[href="#miejsca-sprzedazy"]');
 
 miejscaLink.addEventListener('click', (event) => {
   event.preventDefault();
   const miejscaSection = document.querySelector('#miejsca-sprzedazy');
-  const offset = 340; 
-  const miejscaSectionPosition = miejscaSection.getBoundingClientRect().top + window.pageYOffset - offset;
+  const headerHeight = document.querySelector('.header').offsetHeight;
+  const offset = 20; // Additional offset if needed
+  const miejscaSectionPosition = miejscaSection.getBoundingClientRect().top + window.pageYOffset - headerHeight - offset;
   window.scrollTo({ top: miejscaSectionPosition, behavior: 'smooth' });
 });
 
@@ -83,6 +85,7 @@ kontaktLink.addEventListener('click', (event) => {
 // --------- Email ------------
 
 document.addEventListener('DOMContentLoaded', function() {
+  // Form elements
   const emailContact = document.getElementById('email-contact');
   const contactForm = document.getElementById('contact-form');
   const form = document.getElementById('email-form');
@@ -90,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const submitBtn = document.getElementById('submit-btn');
   let formVisible = false;
   
-
+  // Form visibility toggle function
   function toggleContactForm() {
     formVisible = !formVisible;
     
@@ -114,7 +117,8 @@ document.addEventListener('DOMContentLoaded', function() {
       }, 300);
     }
   }
-
+  
+  // Handle email contact section clicks
   if (emailContact) {
     emailContact.addEventListener('click', function(event) {
       if (!event.target.closest('#contact-form') || event.target.closest('#contact-form') === contactForm) {
@@ -123,16 +127,58 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   }
-
+  
+  // Link detection functionality
+  function containsLinks(text) {
+    if (!text) return false;
+    
+    const urlPatterns = [
+      /(https?:\/\/[^\s]+)/i,
+      /(www\.[^\s]+\.[a-z]{2,})/i,
+      /([a-z0-9][-a-z0-9]*\.(com|org|net|edu|gov|mil|io|co|biz|info|online|app))/i,
+      /(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})/i
+    ];
+    
+    return urlPatterns.some(pattern => pattern.test(text));
+  }
+  
+  // Real-time message field validation
+  const messageField = form ? form.querySelector('textarea[name="message"]') : null;
+  if (messageField) {
+    messageField.addEventListener('input', function() {
+      if (containsLinks(this.value)) {
+        this.classList.add('invalid-input');
+        resultDiv.innerHTML = '<p class="warning-message">Twoja wiadomość zawiera linki, które nie są dozwolone.</p>';
+        resultDiv.style.display = 'block';
+      } else {
+        this.classList.remove('invalid-input');
+        resultDiv.style.display = 'none';
+      }
+    });
+  }
+  
+  // Integrated form submission handler
   if (form) {
     form.addEventListener('submit', function(e) {
       e.preventDefault();
-
+      
+      // Clear previous messages
+      resultDiv.innerHTML = '';
+      
+      // Check for links in the message
+      const messageContent = messageField ? messageField.value : '';
+      if (containsLinks(messageContent)) {
+        resultDiv.innerHTML = '<p class="error-message">Wiadomość zawiera niedozwolone linki. Usuń linki i spróbuj ponownie.</p>';
+        resultDiv.style.display = 'block';
+        return;
+      }
+      
+      // Proceed with form submission if no links were found
       submitBtn.disabled = true;
       submitBtn.textContent = 'Wysyłanie...';
-
+      
       const formData = new FormData(form);
-
+      
       fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: {
@@ -143,39 +189,48 @@ document.addEventListener('DOMContentLoaded', function() {
         body: JSON.stringify(Object.fromEntries(formData))
       })
       .then(async (response) => {
-        let data = await response.json();
+        let data;
+        try {
+          data = await response.json();
+        } catch (error) {
+          if (response.status === 200) {
+            resultDiv.innerHTML = '<p class="success-message">Dziękujemy! Wiadomość została wysłana.</p>';
+            form.reset();
+            return;
+          }
+          throw new Error('Invalid response format');
+        }
         
-        if (response.status == 200) {
+        if (response.status === 200 || (data && data.success)) {
           resultDiv.innerHTML = '<p class="success-message">Dziękujemy! Wiadomość została wysłana.</p>';
           form.reset();
         } else {
-          resultDiv.innerHTML = `<p class="error-message">${data.message || 'Wystąpił błąd. Spróbuj ponownie później.'}</p>`;
-          console.error(data);
+          throw new Error(data && data.message ? data.message : 'Wystąpił błąd podczas wysyłania wiadomości.');
         }
       })
       .catch((error) => {
-        resultDiv.innerHTML = '<p class="error-message">Wystąpił błąd połączenia. Spróbuj ponownie później.</p>';
-        console.error(error);
+        console.error('Submission error:', error);
+        resultDiv.innerHTML = '<p class="error-message">Wystąpił błąd. Spróbuj ponownie później.</p>';
       })
       .finally(() => {
-
         submitBtn.disabled = false;
         submitBtn.textContent = 'Wyślij wiadomość';
         resultDiv.style.display = 'block';
         
-        setTimeout(() => {
-          if (resultDiv.querySelector('.success-message')) {
+        // Auto-hide form after successful submission
+        if (resultDiv.querySelector('.success-message')) {
+          setTimeout(() => {
             toggleContactForm();
-          }
-        }, 3000);
+          }, 3000);
+        }
       });
     });
   }
   
+  // Prevent event propagation from form
   if (contactForm) {
     contactForm.addEventListener('click', function(event) {
       event.stopPropagation();
     });
   }
 });
-
