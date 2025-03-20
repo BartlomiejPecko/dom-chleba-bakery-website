@@ -33,10 +33,6 @@ links.forEach(function(link) {
 });
 
 
-
-
-
-
 // --------- Buttons for scrolling -------------
 
 const produktyLink = document.querySelector('a[href="#produkty"]');
@@ -87,7 +83,6 @@ kontaktLink.addEventListener('click', (event) => {
 // --------- Email ------------
 
 document.addEventListener('DOMContentLoaded', function() {
-  // Form elements
   const emailContact = document.getElementById('email-contact');
   const contactForm = document.getElementById('contact-form');
   const form = document.getElementById('email-form');
@@ -95,13 +90,12 @@ document.addEventListener('DOMContentLoaded', function() {
   const submitBtn = document.getElementById('submit-btn');
   let formVisible = false;
   
-  // Form visibility toggle function
+
   function toggleContactForm() {
     formVisible = !formVisible;
     
     if (formVisible) {
       contactForm.style.display = 'block';
-      // Animation for form appearance
       contactForm.style.opacity = '0';
       contactForm.style.transform = 'translateY(-20px)';
       
@@ -110,72 +104,65 @@ document.addEventListener('DOMContentLoaded', function() {
         contactForm.style.transform = 'translateY(0)';
       }, 10);
     } else {
-      // Animation for form disappearance
       contactForm.style.opacity = '0';
       contactForm.style.transform = 'translateY(-20px)';
       
       setTimeout(() => {
         contactForm.style.display = 'none';
-        // Reset form and result message
         if (form) form.reset();
         if (resultDiv) resultDiv.style.display = 'none';
       }, 300);
     }
   }
-  
-  // Click handler for email contact section
+
   if (emailContact) {
     emailContact.addEventListener('click', function(event) {
-      // Prevent closing when clicking form elements
       if (!event.target.closest('#contact-form') || event.target.closest('#contact-form') === contactForm) {
         event.preventDefault();
         toggleContactForm();
       }
     });
   }
-  
-  // Form submission handler
+
   if (form) {
     form.addEventListener('submit', function(e) {
       e.preventDefault();
-      
-      // Update button state
+
       submitBtn.disabled = true;
       submitBtn.textContent = 'Wysyłanie...';
-      
-      // Prepare form data
+
       const formData = new FormData(form);
-      
-      // Submit form using fetch API
+
       fetch('https://api.web3forms.com/submit', {
         method: 'POST',
-        body: formData
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        mode: 'cors',
+        body: JSON.stringify(Object.fromEntries(formData))
       })
       .then(async (response) => {
         let data = await response.json();
         
         if (response.status == 200) {
-          // Success message
           resultDiv.innerHTML = '<p class="success-message">Dziękujemy! Wiadomość została wysłana.</p>';
           form.reset();
         } else {
-          // Error message with details if available
           resultDiv.innerHTML = `<p class="error-message">${data.message || 'Wystąpił błąd. Spróbuj ponownie później.'}</p>`;
           console.error(data);
         }
       })
       .catch((error) => {
-        // Network or other error
         resultDiv.innerHTML = '<p class="error-message">Wystąpił błąd połączenia. Spróbuj ponownie później.</p>';
         console.error(error);
       })
       .finally(() => {
-        // Reset button state and show result
+
         submitBtn.disabled = false;
         submitBtn.textContent = 'Wyślij wiadomość';
         resultDiv.style.display = 'block';
         
-        // Auto-hide form after successful submission
         setTimeout(() => {
           if (resultDiv.querySelector('.success-message')) {
             toggleContactForm();
@@ -185,7 +172,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
   
-  // Prevent event propagation from form
   if (contactForm) {
     contactForm.addEventListener('click', function(event) {
       event.stopPropagation();
