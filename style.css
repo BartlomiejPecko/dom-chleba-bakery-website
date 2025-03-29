@@ -217,24 +217,30 @@ section{
     margin-top: 1.5rem;
 }
 
-.hour-item {
-    display: flex;
-    justify-content: center;
-    color: ivory;
-    font-size: 1.5rem;
-    padding: 0.7rem 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
+
 
 .hour-item:last-child {
     border-bottom: none;
 }
 
-.hour-item span {
+/* Fix for hours alignment - centered with aligned times */
+.hour-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: ivory;
+    font-size: 1.5rem;
+    padding: 0.7rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .hour-item span {
+    display: inline-block;
+    width: 45px;  /* Fixed width for day labels */
+    text-align: right;
+    margin-right: 10px;
     font-weight: 600;
-    margin-right: 1rem;
-    min-width: 4rem;
-}
+  }
 
 /* Store List Styling */
 .store-list, .market-list {
@@ -704,6 +710,7 @@ section{
   margin-top: -10px; /* Move weight up slightly */
 }
   
+
 
 
 /*-----------Miesne------------------*/
