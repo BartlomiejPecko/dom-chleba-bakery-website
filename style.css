@@ -1066,9 +1066,6 @@ section{
     }
 }
 
-
-
-
 /* Simple Mobile CSS Fixes */
 
 /* These are the only changes needed for the mobile menu */
@@ -1081,7 +1078,7 @@ section{
     }
     
     /* Fix the navbar display for mobile */
-    .header .navbar {
+    .header .navbar {   
       position: absolute;
       top: 100%;
       left: 0;
