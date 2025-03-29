@@ -619,6 +619,93 @@ section{
     padding: 1rem 0;
 }
 
+
+/* produkty breads sweets */
+
+/* Product consistency styling */
+.food-block {
+    height: 340px;  /* Fixed height for all food product cards */
+    position: relative;
+    background-color: rgba(45, 40, 40, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease-in-out;
+    padding-bottom: 10px;
+  }
+  
+  .food-block:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.4);
+  }
+  
+  .food-block img {
+    height: 180px !important;
+    object-fit: contain;
+    padding: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .food-block:hover img {
+    transform: scale(1.05);
+  }
+  
+  .food-block h3 {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #e8dab0;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-size: 1.9rem;
+    transition: all 0.3s ease;
+    text-align: center;
+    margin: 0.5rem auto;
+  }
+  
+  .food-block:hover h3 {
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  }
+  
+  /* This will handle both weight paragraphs */
+  .food-block p:first-of-type {
+    color: #b0b0b0;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Style for price - always the last paragraph */
+  .food-block p:last-child {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    color: #f0f0f0;
+    font-weight: bold;
+    font-size: 1.8rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  }
+  
+  .food-block:hover p:last-child {
+    background-color: rgba(235, 202, 159, 0.3);
+    transform: scale(1.1);
+  }
+
+/* Simple fix - move weight text up a bit */
+.food-block p:first-of-type,
+.meat-block p:first-of-type {
+  margin-top: -10px; /* Move weight up slightly */
+}
+  
+
+
 /*-----------Miesne------------------*/
 
 /* Meat products styling - Clean version */
