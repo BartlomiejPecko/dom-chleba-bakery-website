@@ -1,4 +1,5 @@
 let navbar = document.querySelector('.navbar');
+let menuBtn = document.querySelector('#menu-btn');
 document.querySelector('#menu-btn').onclick = () => {
   navbar.classList.toggle('active');
 }
@@ -234,3 +235,5 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
+
+
